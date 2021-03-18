@@ -1,0 +1,999 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: #2f4858;
+  --secondary-color: #33658a;
+  --third-color: #86bbd8;
+  --accent-color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-image: linear-gradient(130deg, var(--secondary-color) 0%, var(--third-color) 100%);
+}
+
+h1 {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: clamp(1.65rem, 8vw, 3rem);
+  line-height: 55px;
+  color: var(--accent-color);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--gray-color);
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.button {
+  color: var(--accent-color);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  min-height: 50px;
+  -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.664);
+          box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.664);
+}
+
+nav .nav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+nav .logo {
+  max-width: 150px;
+  height: auto;
+}
+
+nav .nav__middle .nav__links {
+  /*
+    This is the outer svg wrapper that the SVG itself will 
+    fill. Multiple svg-wrapper classes can be put side by side.
+    */
+  /*
+      This is where we define the fill, color, thickness,
+      and stroke pattern of the SVG when there is no hover.
+      The dasharray and offset together define the line position
+      under the words. Here's also where the transition speed is set.
+    */
+  /* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+    */
+  /* 
+    Changing the shape on hover. I change the color of the stroke,
+    make it thinner, then set it to again wrap around the entire parent element.
+    */
+}
+
+nav .nav__middle .nav__links .spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav .nav__middle .nav__links .svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .nav__middle .nav__links #shape {
+  stroke-width: 3px;
+  fill: transparent;
+  stroke: white;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+nav .nav__middle .nav__links #text {
+  margin-top: -35px;
+  text-align: center;
+}
+
+nav .nav__middle .nav__links #text a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+
+nav .nav__middle .nav__links .svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: white;
+}
+
+nav .button {
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+nav .button:hover {
+  background: white;
+  color: var(--main-color);
+}
+
+.hero {
+  position: relative;
+  min-height: 68vh;
+  overflow: hidden;
+}
+
+.hero .hero__header-container {
+  margin-top: 4rem;
+}
+
+.hero .hero__header-container .hero_header {
+  color: white;
+  font-weight: normal;
+  letter-spacing: 3px;
+  opacity: 0;
+  margin-bottom: 2rem;
+  -webkit-animation: fly 1s forwards;
+          animation: fly 1s forwards;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero .hero__header-container .hero__button {
+  padding: 0.5rem;
+  border: 1px solid white;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+.hero .hero__header-container .hero__button:hover {
+  color: var(--main-color);
+  background: white;
+}
+
+.hero .hero__header-container .text-2 {
+  font-size: 1rem;
+}
+
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fly {
+  0% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.hero .hero__scales {
+  position: absolute;
+  bottom: -6px;
+  left: 15%;
+  max-width: 200px;
+  height: auto;
+}
+
+.hero .quarter-circle-bottom-right {
+  --size: 25vw;
+  width: calc(2 * var(--size));
+  height: calc(2 * var(--size));
+  background-color: #86bbd8;
+  background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='bevel-circle' fill='%2333658a' fill-opacity='0.1'%3E%3Cpath d='M10.414 29l-8 8h33.172l-8-8H10.414zM9 27.586l-8 8V2.414l8 8v17.172zM10.414 9l-8-8h33.172l-8 8H10.414zM29 10.414l8-8v33.172l-8-8V10.414zM11 11h16v16H11V11zm8 14c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM0 0h38v38H0V0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-radius: calc(2 * var(--size));
+  -moz-border-radius: calc(2 * var(--size));
+  -webkit-border-radius: calc(2 * var(--size));
+  position: absolute;
+  bottom: calc(-1 * var(--size));
+  right: calc(-1 * var(--size));
+  -webkit-animation: rotating 180s linear infinite;
+          animation: rotating 180s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.search-section {
+  background: var(--main-color);
+  min-height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-section .search-header {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-section .input__element {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  color: var(--accent-color);
+  /* Clear floats */
+}
+
+.search-section .input__element input {
+  width: 80%;
+  float: left;
+  height: 100%;
+  color: var(--accent-color);
+  background: var(--main-color);
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-section .input__element textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.search-section .input__element label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.search-section .input__element label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  border-bottom: 3px solid var(--third-color);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.search-section .input__element .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.search-section .input__element input:focus + .animate .content-name,
+.search-section .input__element input:not(:placeholder-shown) + .animate .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 14px;
+  color: var(--third-color);
+}
+
+.search-section .input__element input:focus + .animate::after,
+.search-section .input__element input:not(:placeholder-shown) + .animate::after {
+  -webkit-transform: translatex(0%);
+          transform: translatex(0%);
+}
+
+.search-section .input__element button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: var(--main-color);
+  color: white;
+  font-size: 17px;
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+.search-section .input__element button:hover {
+  background: var(--third-color);
+  color: var(--main-color);
+}
+
+.search-section .input__element .input__element::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.middle__section {
+  padding: 10rem 0;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("img/section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+}
+
+.middle__section .container {
+  background: var(--accent-color);
+  padding: 3rem 1rem;
+  border-radius: 5px;
+  background-blend-mode: multiply;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.middle__section .section_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.middle__section .section_wrapper .section-second-bg {
+  position: absolute;
+  z-index: 222;
+  bottom: 0%;
+  right: 0%;
+  opacity: 1;
+  min-width: 50%;
+}
+
+.middle__section .section_wrapper .left {
+  z-index: 333;
+  width: 40%;
+}
+
+.middle__section .section_wrapper .left .section_image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.middle__section .section_wrapper .right {
+  z-index: 333;
+  width: 58%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.middle__section .section_wrapper .right .section_title {
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+.middle__section .section_wrapper .right .section_text {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+.middle__section .section_wrapper .right .section__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.middle__section .section_wrapper .right .section__cards .section__card {
+  min-height: 66px;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.middle__section .section_wrapper .right .section__cards .section__card:hover {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.middle__section .section_wrapper .right .section__cards .section__card img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.middle__section .section_wrapper .right .section__cards .section__card .section__card-text {
+  color: var(--main-color);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.counter {
+  width: 100%;
+  background: var(--main-color);
+  min-height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(/img/counter-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.counter .counter-wrapper {
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.counter .counter-wrapper .counter-col {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.counter .counter-wrapper .counter-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.counter .counter-wrapper .counter-value {
+  font-size: 10rem;
+}
+
+.contact {
+  background: url(/img/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .contact__intro {
+  text-align: center;
+}
+
+.contact .contact__intro .contact__title {
+  font-size: 2.25rem;
+  margin: 0 auto;
+  color: var(--accent-color);
+}
+
+.contact .contact__intro .contact__text {
+  margin: 0 auto 1rem auto;
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.contact .contact__wrapper {
+  color: var(--third-color);
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.5625rem;
+  border-radius: 5px;
+}
+
+.contact .contact__wrapper p {
+  color: var(--third-color);
+}
+
+.contact .contact__wrapper .left {
+  min-height: 550px;
+  max-width: 395px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.75rem;
+  background-image: url("./img/logo-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.contact .contact__wrapper .left .contact__section--title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contact .contact__wrapper .left .contact__means img {
+  width: 25px;
+  height: 25px;
+}
+
+.contact .contact__wrapper .left .contact__means .contact__means--element {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__wrapper .left .contact__means .contact__means--element .contact__mean--text {
+  margin-left: 0.5rem;
+}
+
+.contact .contact__wrapper .right {
+  margin-top: 3rem;
+}
+
+.contact .contact__wrapper .right .input__element {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.contact .contact__wrapper .right .input__element input {
+  width: 100%;
+  height: 100%;
+  color: var(--main-color);
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.contact .contact__wrapper .right .input__element textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.contact .contact__wrapper .right .input__element label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.contact .contact__wrapper .right .input__element label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  border-bottom: 3px solid var(--secondary-color);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.contact .contact__wrapper .right .input__element .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.contact .contact__wrapper .right .input__element input:focus + .animate .content-name,
+.contact .contact__wrapper .right .input__element input:not(:placeholder-shown) + .animate .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.contact .contact__wrapper .right .input__element input:focus + .animate::after,
+.contact .contact__wrapper .right .input__element input:not(:placeholder-shown) + .animate::after {
+  -webkit-transform: translatex(0%);
+          transform: translatex(0%);
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes {
+  margin: 1rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes p {
+  margin: 0 0 0.5rem 0;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes label {
+  letter-spacing: 0.1rem;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .real-label {
+  margin-left: 0.5rem;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox {
+  --border-hover: #bbc1e1;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox input,
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  outline: none;
+  background: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--main-color));
+          box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--main-color));
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox input:hover {
+  --s: 2px;
+  --b: var(--border-hover);
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox input:checked {
+  --b: var(--secondary-color);
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox svg {
+  pointer-events: none;
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--stroke, var(--secondary-color));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+          transform: scale(var(--scale, 1)) translateZ(0);
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox.path input:checked {
+  --s: 2px;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox.path input:checked + svg {
+  --a: 16.1 86.12;
+  --o: 102.22;
+}
+
+.contact .contact__wrapper .right .contact__checkBoxes .checkBox__element .checkbox.path svg {
+  stroke-dasharray: var(--a, 86.12);
+  stroke-dashoffset: var(--o, 86.12);
+  -webkit-transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
+  transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
+}
+
+@-webkit-keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.contact .hide {
+  display: none;
+}
+
+.contact .submit-button {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  height: 50px;
+  width: 150px;
+  line-height: 50px;
+  overflow: hidden;
+  background: var(--secondary-color);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .submit-button:hover, .contact .submit-button:focus {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact .submit-button.animated {
+  -webkit-animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.contact .submit-button > span {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.contact .submit-button > span.pre-state-msg {
+  -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.contact .submit-button.state-1 .pre-state-msg {
+  margin-top: -50px;
+}
+
+.contact .submit-button.state-2 .pre-state-msg {
+  margin-top: -100px;
+}
+
+@media (min-width: 700px) {
+  .contact {
+    padding: 5rem 0;
+  }
+  .contact .contact__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 600px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .contact__wrapper .left {
+    max-width: 800px;
+    width: 40%;
+    background-size: 50%;
+  }
+  .contact .contact__wrapper .right {
+    width: 50%;
+    margin: auto auto;
+  }
+  .contact .contact__wrapper .right form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact__wrapper .right form .input__row + .input__row {
+    margin-top: 2rem;
+  }
+  .contact .contact__wrapper .right form .input__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .contact__wrapper .right form .input__row .input__element {
+    width: 45%;
+  }
+  .contact .contact__wrapper .right form .contact__checkBoxes {
+    margin: 2rem 0;
+  }
+  .contact .contact__wrapper .right form .contact__form--text {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+  }
+  .contact .contact__wrapper .right form .checkbox_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .contact__wrapper .right form button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+/*# sourceMappingURL=style.css.map */

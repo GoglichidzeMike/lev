@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>MoneyFinder</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav__wrapper">
+          <a class="logo" href="#"><img src="img/logo.svg" alt="MFC LOGO" /></a>
+          <div class="nav__middle">
+            <ul class="nav__links">
+              <div class="svg-wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                  <rect id="shape" height="40" width="150" />
+                  <div id="text">
+                    <a href="">
+                      <span class="spot"></span>
+                      Home
+                    </a>
+                  </div>
+                </svg>
+              </div>
+              <div class="svg-wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                  <rect id="shape" height="40" width="150" />
+                  <div id="text">
+                    <a href="">
+                      <span class="spot"></span>
+                      Search
+                    </a>
+                  </div>
+                </svg>
+              </div>
+              <div class="svg-wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                  <rect id="shape" height="40" width="150" />
+                  <div id="text">
+                    <a href="">
+                      <span class="spot"></span>
+                      About Us
+                    </a>
+                  </div>
+                </svg>
+              </div>
+              <!-- <div class="svg-wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                  <rect id="shape" height="40" width="150" />
+                  <div id="text">
+                    <a href="">
+                      <span class="spot"></span>
+                      Contact
+                    </a>
+                  </div>
+                </svg>
+              </div> -->
+            </ul>
+          </div>
+          <a class="nav__button button" href="#contact">Contact Us</a>
+          <!-- <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="quarter-circle-bottom-right"></div>
+      <div class="container">
+        <div class="hero__header-container">
+          <h1 class="hero_header">The Safest Way To Enjoy Trust</h1>
+          <h2 class="hero_header">Safe Market Is Good Market</h2>
+          <h2 class="hero_header text-2">
+            MFC Legal provides confidence to participate <br />by safeguarding
+            market integrity.
+          </h2>
+          <a href="#" class="hero_header hero__button">Find Out More</a>
+        </div>
+        <div class="hero__scales">
+          <img src="img/scales.svg" alt="Scales" />
+        </div>
+      </div>
+    </div>
+    <div class="search-section">
+      <p class="search-header">Search your VAT Balance and other shit below.</p>
+      <form class="input__element" action="/entries/details" method="POST">
+        <input
+          type="text"
+          name="ID"
+          id="ID"
+          autocomplete="off"
+          placeholder=" "
+          required
+        />
+        <label for="ID" class="animate">
+          <span class="content-name"> Enter Your ID Here </span>
+        </label>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="middle__section">
+      <div class="container">
+        <div class="section_wrapper">
+          <img
+            class="section-second-bg"
+            src="img/section-second-bg.svg"
+            alt="earth"
+          />
+          <div class="section_col left">
+            <img
+              class="section_image"
+              src="img/section.jpg"
+              alt="Finance building"
+            />
+          </div>
+          <div class="section_col right">
+            <h3 class="section_title">
+              This is a larger title, like a cool large title.
+              <br />
+              Maybe even 2 lines? Idk man who gives a shit
+            </h3>
+            <p class="section_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+              itaque ab. Est sunt incidunt debitis. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Delectus, vitae? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. In, itaque ab. Est sunt
+              incidunt debitis. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Delectus, vitae?
+            </p>
+            <div class="section__cards">
+              <div class="col">
+                <div class="section__card">
+                  <img
+                    src="img/section_card_pig.png"
+                    alt="piggy bank illustration"
+                  />
+                  <p class="section__card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Est, dolore!
+                  </p>
+                </div>
+                <div class="section__card">
+                  <img
+                    src="img/section_card_money.png"
+                    alt="money bag and calculator illustration"
+                  />
+                  <p class="section__card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Est, dolore!
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="section__card">
+                  <img
+                    src="img/section_card_conference.png"
+                    alt="piggy bank illustration"
+                  />
+                  <p class="section__card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Est, dolore!
+                  </p>
+                </div>
+                <div class="section__card">
+                  <img
+                    src="img/section_card_money.png"
+                    alt="money bag and calculator illustration"
+                  />
+                  <p class="section__card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Est, dolore!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="counter">
+      <div class="container counter-wrapper">
+        <p class="counter-text">
+          Some VEERRY important shit is being counted here.
+        </p>
+
+        <div id="counter">
+          <p class="counter-p">
+            <span class="counter-value" data-count="6675">0</span>
+          </p>
+        </div>
+        <p class="counter-text">Add many more to come ...</p>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="contact__intro">
+          <p class="contact__title">Need to talk?</p>
+          <p class="contact__text">
+            text me or call me, idc whatever helps you sleep at night.
+          </p>
+        </div>
+        <div class="contact__wrapper">
+          <div class="contact__col left">
+            <p class="contact__section--title">Contact Info</p>
+            <p class="contact__section--text">
+              fill out the form on the right
+              <br />
+              <br />
+              or use one of the methods below
+            </p>
+            <div class="contact__means">
+              <div class="contact__means--element">
+                <img
+                  class="contact__mean--image"
+                  src="./img/smartphone.svg"
+                  alt="smartphone icon"
+                />
+                <p class="contact__mean--text">+44 02 3945 3483</p>
+              </div>
+              <div class="contact__means--element">
+                <img
+                  class="contact__mean--image"
+                  src="./img/mail.svg"
+                  alt="smartphone icon"
+                />
+                <p class="contact__mean--text">info@mfclegal.com</p>
+              </div>
+              <div class="contact__means--element">
+                <img
+                  class="contact__mean--image"
+                  src="./img/contact_fb.svg"
+                  alt="smartphone icon"
+                />
+                <p class="contact__mean--text">Skype here maybe? idc</p>
+              </div>
+              <!-- <div class="contact__means--element">
+                <img
+                  class="contact__mean--image"
+                  src="./img/contact_link.svg"
+                  alt="smartphone icon"
+                />
+                <p class="contact__mean--text">linked.in/yayy</p>
+              </div> -->
+            </div>
+          </div>
+          <div class="contact__col right">
+            <form
+              class="contact__form"
+              action="https://app.99inbound.com/api/e/u7195EeC"
+              method="POST"
+              id="contact__form"
+            >
+              <div class="input__row">
+                <div class="input__element">
+                  <input
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    autocomplete="off"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="firstName" class="animate">
+                    <span class="content-name"> First Name </span>
+                  </label>
+                </div>
+                <div class="input__element">
+                  <input
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    autocomplete="off"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="lastName" class="animate">
+                    <span class="content-name"> Last Name </span>
+                  </label>
+                </div>
+              </div>
+              <div class="input__row">
+                <div class="input__element">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="off"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="email" class="animate">
+                    <span class="content-name"> Email </span>
+                  </label>
+                </div>
+                <div class="input__element">
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    autocomplete="off"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="phone" class="animate">
+                    <span class="content-name"> Phone </span>
+                  </label>
+                </div>
+              </div>
+              <div class="contact__checkBoxes">
+                <p class="contact__form--text">What do You need?</p>
+                <div class="checkbox_row">
+                  <div class="checkBox__element">
+                    <label class="checkbox path">
+                      <input
+                        type="checkbox"
+                        id="design"
+                        name="design"
+                        value="Web Design"
+                      />
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="real-label" for="design">Web Design</label
+                    ><br />
+                  </div>
+                  <div class="checkBox__element">
+                    <label class="checkbox path">
+                      <input
+                        type="checkbox"
+                        id="development"
+                        name="development"
+                        value="Web Development"
+                      />
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="real-label" for="development"
+                      >Web Development</label
+                    ><br />
+                  </div>
+                  <div class="checkBox__element">
+                    <label class="checkbox path">
+                      <input
+                        type="checkbox"
+                        id="other"
+                        name="other"
+                        value="other"
+                      />
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="real-label" for="other"> Other </label><br />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__textarea">
+                <div class="input__element">
+                  <input
+                    type="tel"
+                    name="message"
+                    autocomplete="off"
+                    placeholder=" "
+                  />
+                  <label for="message" class="animate">
+                    <span class="content-name"> Short Message </span>
+                  </label>
+                </div>
+              </div>
+              <button class="submit-button state-0">
+                <span class="pre-state-msg">Send Message</span>
+                <span class="current-state-msg hide">Sending...</span>
+                <span class="done-state-msg hide">Done!</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
