@@ -889,4 +889,43 @@ nav {
     }
   }
 }
+
+.footer {
+  padding: 1rem 0;
+  width: 100%;
+  background: var(--main-color);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    ul {
+      margin: 0.5rem 0;
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      color: var(--third-color);
+      a {
+        color: var(--third-color);
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    li + li {
+      margin-left: 1rem;
+    }
+  }
+}
 //css

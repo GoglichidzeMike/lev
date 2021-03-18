@@ -996,4 +996,53 @@ nav .button:hover {
         align-self: flex-end;
   }
 }
+
+.footer {
+  padding: 1rem 0;
+  width: 100%;
+  background: var(--main-color);
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .container img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer .container ul {
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .container li {
+  list-style: none;
+  color: var(--third-color);
+}
+
+.footer .container li a {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+.footer .container li a:hover {
+  opacity: 0.8;
+}
+
+.footer .container li + li {
+  margin-left: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
