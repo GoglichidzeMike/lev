@@ -554,7 +554,7 @@ nav .button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(/img/counter-background.png);
+  background: url(img/counter-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -594,7 +594,7 @@ nav .button:hover {
 }
 
 .contact {
-  background: url(/img/contact-bg.jpg);
+  background: url(img/contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1047,13 +1047,13 @@ nav .button:hover {
 }
 
 .about {
-  background: url(/img/about/about-bg.jpg);
+  background: url(img/about/about-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .about .about-intro {
-  background: url(/img/about/about-top-bg.jpg);
+  background: url(img/about/about-top-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 6rem 0;

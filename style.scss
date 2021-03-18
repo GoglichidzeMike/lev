@@ -499,7 +499,7 @@ nav {
   background: var(--main-color);
   min-height: 25vh;
   display: flex;
-  background: url(/img/counter-background.png);
+  background: url(img/counter-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -531,7 +531,7 @@ nav {
 
 .contact {
   // background-color: var(--accent-color);
-  background: url(/img/contact-bg.jpg);
+  background: url(img/contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -933,11 +933,11 @@ nav {
 ////ABOUT US PAGE
 
 .about {
-  background: url(/img/about/about-bg.jpg);
+  background: url(img/about/about-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   .about-intro {
-    background: url(/img/about/about-top-bg.jpg);
+    background: url(img/about/about-top-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 6rem 0;
