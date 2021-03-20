@@ -75,6 +75,7 @@ nav {
   min-height: 50px;
   -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.664);
           box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.664);
+  position: stick;
 }
 
 nav .nav__wrapper {
@@ -423,8 +424,9 @@ nav .button:hover {
 
 .middle__section .container {
   background: var(--accent-color);
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   border-radius: 5px;
+  width: 65%;
   background-blend-mode: multiply;
   margin: 0 auto;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -435,9 +437,9 @@ nav .button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: relative;
 }
 
@@ -453,13 +455,23 @@ nav .button:hover {
 .middle__section .section_wrapper .left {
   z-index: 333;
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .middle__section .section_wrapper .left .section_image {
   width: 100%;
   display: block;
   margin: 0 auto;
-  max-width: 450px;
+  max-width: 500px;
   height: auto;
   border-radius: 5px;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -468,7 +480,7 @@ nav .button:hover {
 
 .middle__section .section_wrapper .right {
   z-index: 333;
-  width: 58%;
+  width: 48%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,19 +488,20 @@ nav .button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .middle__section .section_wrapper .right .section_title {
   color: var(--main-color);
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .middle__section .section_wrapper .right .section_text {
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--main-color);
 }
 
