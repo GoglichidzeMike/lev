@@ -1,6 +1,6 @@
 $(".hero_header").each(function (i) {
   $(this).css({
-    "animation-delay": i * 2 + "s",
+    "animation-delay": i * 1.5 + "s",
   });
 });
 var a = 0;
@@ -21,10 +21,20 @@ $(window).scroll(function () {
           duration: 4000,
           easing: "swing",
           step: function () {
-            $this.text(Math.floor(this.countNum));
+            $this.text(
+              Math.floor(this.countNum).toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })
+            );
           },
           complete: function () {
-            $this.text(this.countNum);
+            $this.text(
+              this.countNum.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })
+            );
           },
         }
       );
